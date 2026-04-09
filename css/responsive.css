@@ -1,0 +1,110 @@
+/* ============================================================
+   BELLE COSMÉTICOS — Responsive
+   ============================================================ */
+
+/* ── Tablet (≤ 1024px) ─────────────────────────────────── */
+@media (max-width: 1024px) {
+  .hero { grid-template-columns: 1fr; min-height: auto; }
+  .hero-visual { min-height: 360px; }
+  .hero-content { padding: 80px 40px; }
+
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+  .steps-grid  { grid-template-columns: repeat(2, 1fr); }
+  .steps-grid::before { display: none; }
+
+  .catalogo-features { grid-template-columns: 1fr 1fr; }
+  .sobre-grid { gap: 48px; }
+}
+
+/* ── Tablet pequeno (≤ 768px) ──────────────────────────── */
+@media (max-width: 768px) {
+  /* Header */
+  .header-inner { padding: 0 20px; }
+  .nav {
+    display: none;
+    position: fixed;
+    inset: 72px 0 0;
+    background: var(--verde);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 16px;
+    overflow-y: auto;
+  }
+  .nav.open { display: flex; }
+  .nav a {
+    padding: 14px 18px;
+    font-size: 1rem;
+    border-radius: var(--radius);
+  }
+  .menu-toggle { display: flex; }
+
+  /* Hero */
+  .hero-content { padding: 60px 24px; }
+  .hero-content h1 { font-size: 2.2rem; }
+  .hero-btns { flex-direction: column; gap: 10px; }
+  .hero-btns .btn { width: 100%; justify-content: center; }
+  .hero-trust { gap: 14px; }
+  .hero-visual { min-height: 280px; }
+  .showcase-grid { max-width: 280px; gap: 10px; }
+
+  /* Sections */
+  .marcas { padding: 64px 0; }
+  .marcas-grid { grid-template-columns: 1fr; gap: 20px; }
+  .destaques { padding: 64px 0; }
+  .produtos-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+
+  .como-funciona { padding: 64px 0; }
+  .steps-grid { grid-template-columns: 1fr; gap: 24px; }
+
+  /* Footer */
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+
+  /* Page hero */
+  .page-hero { padding: 120px 24px 60px; }
+
+  /* Sobre */
+  .sobre-grid { grid-template-columns: 1fr; gap: 48px; }
+  .sobre-values { grid-template-columns: 1fr; }
+
+  /* Contato */
+  .contato-grid { grid-template-columns: 1fr; gap: 40px; }
+
+  /* Catalogo */
+  .catalogo-banner { padding: 48px 28px; }
+  .catalogo-features { grid-template-columns: 1fr; }
+
+  /* Filtros */
+  .filtros { gap: 8px; }
+}
+
+/* ── Mobile (≤ 480px) ──────────────────────────────────── */
+@media (max-width: 480px) {
+  .container { padding: 0 16px; }
+  .section-header { margin-bottom: 36px; }
+
+  h1 { font-size: 1.9rem; }
+  h2 { font-size: 1.5rem; }
+
+  .hero-content { padding: 50px 20px; }
+  .hero-trust   { flex-wrap: wrap; justify-content: center; }
+
+  .produtos-grid { grid-template-columns: 1fr; }
+  .showcase-grid { grid-template-columns: 1fr; }
+  .showcase-card.featured { grid-column: span 1; }
+
+  .sobre-badge { bottom: -10px; right: -10px; }
+
+  .whatsapp-float { bottom: 18px; right: 18px; }
+  .whatsapp-float-btn { width: 52px; height: 52px; font-size: 1.4rem; }
+}
+
+/* ── Hover only on touch ────────────────────────────────── */
+@media (hover: none) {
+  .produto-card:hover,
+  .marca-card:hover,
+  .showcase-card:hover {
+    transform: none;
+  }
+}

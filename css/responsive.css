@@ -19,23 +19,35 @@
 /* ── Tablet pequeno (≤ 768px) ──────────────────────────── */
 @media (max-width: 768px) {
   /* Header */
-  .header-inner { padding: 0 20px; }
+  .header-inner { padding: 0 20px; 
+  z-index: 9999;}
   .nav {
     display: none;
     position: fixed;
-    inset: 72px 0 0;
-    background: var(--verde);
+    top: 72px; /* Distância do topo (ajuste se seu header for mais alto/baixo) */
+    left: 0;
+    width: 100%;
+    height: calc(80vh - 72px); /* Ocupa 100% da tela menos a altura do header */
+    background: var(--verde); /* Fundo verde escuro */
     flex-direction: column;
-    align-items: stretch;
-    gap: 0;
-    padding: 16px;
+    align-items: center; /* Centraliza os botões */
+    justify-content: flex-start;
+    padding: 32px 20px;
     overflow-y: auto;
   }
   .nav.open { display: flex; }
   .nav a {
-    padding: 14px 18px;
-    font-size: 1rem;
-    border-radius: var(--radius);
+    color: #ffffff; /* Força a cor branca nos links */
+    font-size: 1.2rem;
+    padding: 16px;
+    width: 100%;
+    text-align: center;
+    width: 40%;
+  }
+  .btn.btn-primary.header-cta {
+    justify-content: center;
+    margin-top: 16px;
+    width: 40%;
   }
   .menu-toggle { display: flex; }
 
@@ -47,7 +59,6 @@
   .hero-trust { gap: 14px; }
   .hero-visual { min-height: 280px; }
   .showcase-grid { max-width: 280px; gap: 10px; }
-
   /* Sections */
   .marcas { padding: 64px 0; }
   .marcas-grid { grid-template-columns: 1fr; gap: 20px; }
@@ -86,6 +97,24 @@
 
   h1 { font-size: 1.9rem; }
   h2 { font-size: 1.5rem; }
+
+  .nav{
+    height: calc(60vh - 72px);
+  }
+
+  .nav a {
+    color: #ffffff; /* Força a cor branca nos links */
+    font-size: 1.2rem;
+    padding: 16px;
+    width: 100%;
+    text-align: center;
+    width: 60%;
+  }
+  .btn.btn-primary.header-cta {
+    justify-content: center;
+    margin-top: 16px;
+    width: 60%;
+  }
 
   .hero-content { padding: 50px 20px; }
   .hero-trust   { flex-wrap: wrap; justify-content: center; }

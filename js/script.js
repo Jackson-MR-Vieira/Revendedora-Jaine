@@ -3,8 +3,8 @@
    Vanilla JS: nav, filters, WhatsApp links, scroll reveal
    ============================================================ */
 
-// ── Número WhatsApp (altere aqui) ──────────────────────────
-const WA_NUMBER = '5511999999999'; // Substitua pelo número real
+// ── Número WhatsApp  ──────────────────────────
+const WA_NUMBER = '5511999999999'; // Substir pelo número real
 
 // ── Helpers ────────────────────────────────────────────────
 function waLink(msg) {
